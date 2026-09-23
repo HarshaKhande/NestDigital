@@ -66,3 +66,20 @@ for row in matrix:
     for item in row:
         print(item, end=" ")
     print()  # Moves to the next line after each row finishes
+
+# else with for loop
+
+numbers = [1,3,5,7,9]
+search_for = 10
+
+for num in numbers:
+    if num == search_for:
+        print (f"Found {search_for}")
+        break
+else:
+    print(f"{search_for} was not found")
+
+
+
+
+
