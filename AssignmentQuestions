@@ -1,0 +1,16 @@
+1.Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
+between 2000 and 3200 (both included).
+2.Write a program which can compute the factorial of a given numbers.
+3.Create variables to store your name, age, salary, and whether you are employed. Print each variable along with its datatype.
+4.Check whether the word "Python" exists inside "I am learning Python programming".
+5.Count how many times the letter "a" appears in "banana apple mango".
+6.Given: text = "PythonProgramming" Print "Python" using slicing and Print the last 5 characters
+7.Check whether "Python123" contains only alphabet characters
+8.Check whether a number is positive, negative, or zero
+9.Calculate the sum of numbers from 1 to 100.
+10.Print even numbers from 2 to 20 using while loop
+11.Print numbers from 1 to 10 but stop when the number becomes 6
+12.Search for 50 inside a list. Print "Found" if present; otherwise use for-else to print "Not Found".
+13.Create a dictionary containing student name, age, course, and marks.
+14.Create a Student class whose constructor accepts name, age, and marks.
+15.Create a Student class and overload > to compare student marks.
