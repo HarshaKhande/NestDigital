@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Squish Web Elements Demo</title>
+<style>body{font-family:Arial,sans-serif;max-width:1000px;margin:30px auto;padding:0 18px}section{border:1px solid #ddd;padding:16px;margin:16px 0;border-radius:8px}input,select,button{padding:7px;margin:4px}table{border-collapse:collapse;width:100%;margin-top:10px}td,th{border:1px solid #bbb;padding:8px;text-align:left}#dragSource,#dropTarget,#doubleClickArea{display:inline-block;padding:18px;margin:8px;border:1px solid #999}iframe{width:100%;height:180px;border:1px solid #bbb}</style>
+<script>
+function saveData(){document.getElementById('successMessage').innerText='Saved successfully'}
+function doLogin(){const u=document.getElementById('usernameInput').value;const p=document.getElementById('passwordInput').value;const ok=(u==='admin'&&p==='admin123')||(u==='tester'&&p==='test123');document.getElementById('loginResult').innerText=ok?'Success':'Failure'}
+function uploadFile(){document.getElementById('uploadSuccessMessage').innerText='Upload successful'}
+function allowDrop(ev){ev.preventDefault()} function drag(ev){ev.dataTransfer.setData('text','dragSource')} function drop(ev){ev.preventDefault();document.getElementById('dropSuccessMessage').innerText='Dropped'}
+</script></head><body>
+<h1>Squish Web Elements Demo</h1>
+<section><h2>Textboxes and Login</h2><input id="usernameInput" type="text" placeholder="Username"><input id="passwordInput" type="password" placeholder="Password"><button id="loginButton" onclick="doLogin()">Login</button><div id="loginResult"></div></section>
+<section><h2>Button</h2><button id="saveButton" onclick="saveData()">Save</button><div id="successMessage"></div></section>
+<section><h2>Checkbox / Radio</h2><label><input id="termsCheckbox" type="checkbox"> Accept Terms</label><br><label><input id="maleRadioButton" name="gender" type="radio" value="male"> Male</label><label><input id="femaleRadioButton" name="gender" type="radio" value="female"> Female</label></section>
+<section><h2>Dropdown</h2><select id="countryDropdown"><option value="">Choose Country</option><option value="IN">India</option><option value="US">United States</option><option value="AU">Australia</option></select></section>
+<section id="about"><h2 id="aboutHeading">About Us</h2><a id="aboutLink" href="#about">About Us</a></section>
+<section><h2>Static Table</h2><table id="usersTable"><thead><tr><th>Name</th><th>Role</th></tr></thead><tbody><tr><td>Anurag</td><td>Admin</td></tr><tr><td>Tester</td><td>QA</td></tr></tbody></table></section>
+<section><h2>Dynamic Table</h2><table id="employeeTable"><thead><tr><th>Name</th><th>Department</th><th>Action</th></tr></thead><tbody><tr><td>Anurag</td><td>QA</td><td><button onclick="this.innerText='Editing'">Edit</button></td></tr><tr><td>Rahul</td><td>Engineering</td><td><button onclick="this.innerText='Editing'">Edit</button></td></tr></tbody></table></section>
+<section><h2>Alerts</h2><button id="alertButton" onclick="alert('Saved successfully')">Show Alert</button><button id="deleteButton" onclick="confirm('Are you sure?')">Show Confirm</button></section>
+<section><h2>File Upload</h2><input id="chooseFileButton" type="file"><button id="uploadButton" onclick="uploadFile()">Upload</button><div id="uploadSuccessMessage"></div></section>
+<section><h2>Mouse Actions</h2><button id="clickArea" onclick="this.innerText='Clicked'">Click Me</button><div id="doubleClickArea" ondblclick="this.innerText='Double Clicked'">Double Click Me</div><div id="dragSource" draggable="true" ondragstart="drag(event)">Drag Me</div><div id="dropTarget" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div><div id="dropSuccessMessage"></div></section>
+<section><h2>Keyboard</h2><input id="keyboardInput" type="text" placeholder="Type here"></section>
+<section><h2>New Window / Tab</h2><button id="openChildWindowButton" onclick="window.open('/child.html','_blank')">Open Child Window</button></section>
+<section><h2>Frame</h2><iframe id="paymentFrame" name="paymentFrame" src="/frame.html"></iframe></section>
+<section><h2>Dynamic Objects</h2><button id="order_12345">Open Order</button><span id="dynamicOrderLabel">Order #12345</span></section>
+</body></html>

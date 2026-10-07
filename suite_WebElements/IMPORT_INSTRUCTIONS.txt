@@ -1,0 +1,12 @@
+IMPORT STEPS
+
+1. Extract the ZIP.
+2. Open Command Prompt in suite_WebElements\demo_site.
+3. Run: python server.py
+4. Confirm http://127.0.0.1:8000 opens.
+5. Open Squish IDE.
+6. File -> Open Test Suite.
+7. Select the extracted suite_WebElements folder.
+8. Run the tst_* cases.
+
+Object Map: shared\scripts\names.py
